@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="myForm" >
+  Some number:<br> <input  type="number" id="a" value=""><br>
+  <p style="color:red" id="demoa"></p>
+  Some number: <br><input  type="number" id="b" value=""><br>
+  <p style="color:red" id="demob"></p>
+  Some number:<br> <input  type="number" id="c" value=""><br>
+  <p style="color:red" id="democ"></p>
+  <br>
+ 
+</form> 
+  <input type="submit" onclick="myFunction()" value="Submit">
+
+
+
+
+<script>
+function myFunction() {
+    var z = document.getElementById("a").value;
+    if(z.length==0)
+    document.getElementById("demoa").innerHTML = "A number is required";
+    else
+    document.getElementById("demoa").innerHTML = "";
+    
+    var x = document.getElementById("b").value;
+    if(x.length==0)
+    {
+    document.getElementById("demob").innerHTML = "A number is required";
+    }
+    else
+    document.getElementById("demob").innerHTML = "";
+    if(x%10!==0)
+    document.getElementById("demob").innerHTML = "The number should be divisible by 10";
+   
+    
+    var y=document.getElementById("c").value;
+    if(y.length<7)
+   document.getElementById("democ").innerHTML = "The number should be at least 7 digits";
+   else
+   document.getElementById("democ").innerHTML = "";
+   
+ 
+}
+</script>
+
+</body>
+</html>

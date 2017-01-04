@@ -1,0 +1,37 @@
+<html>
+<body>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<table border="1" class="authors-list">
+
+    <tr>
+		<td>
+			<select name="slemail">
+				<option>Email</option>
+			</select>
+		</td>
+        <td>
+            <input type="text" name="email" />
+        </td>
+		<td>
+			<label name="lbcm">Comments</label>
+		</td>
+        <td>
+            <input type="text" name="comments" />
+        </td>
+    </tr>
+</table>
+<button href="#" title="" class="add-author">Add Row</button>
+<script>
+var counter = 1;
+jQuery('button.add-author').click(function(event){
+    event.preventDefault();
+    counter++;
+    var newRow = jQuery('<tr><td><select name="slemail"><option>Email</option></select></td><td><input type="text" name="email' +
+        counter + '"/></td><td><label name="lbcm">Comments</label></td><td><input type="text" name="comments' +
+        counter + '"/></td></tr>');
+    jQuery('table.authors-list').append(newRow);
+});
+</script>
+
+<body>
+</html>
